@@ -103,4 +103,5 @@ ENV/
 
 
 .ipynb_checkpoints/*
-*.ipynb
+project-checkpoint.ipynb
+.ipynb_checkpoints/project-checkpoint.ipynb
