@@ -97,3 +97,10 @@ ENV/
 
 # mypy
 .mypy_cache/
+
+
+
+
+
+.ipynb_checkpoints/*
+*.ipynb
