@@ -137,11 +137,15 @@ To this:
 
 #### 5. Describe how (and identify where in your code) you calculated the radius of curvature of the lane and the position of the vehicle with respect to center.
 
-TO DO
+The radius of the curvature is calculated under the `draw_curvature` function and is based on the same approach as shown in the udacity lectures.
+
+The position relative to the center is located in the same function. The logic for this is firstly each image is 1280px wide, so this means that we can hardcode the center line. From here we calculate the absolute difference between the center and the left, right lane lines respectively, from the "back" of the image (i.e. the part closest to the camera). 
+
+From here we can easily deduce the number of meters from the center as shown in the udacity lecture materials.
 
 #### 6. Provide an example image of your result plotted back down onto the road such that the lane area is identified clearly.
 
-This step was implemented "draw full pipeline" step (TO DO) 
+This step was implemented "draw full pipeline" step
 
 ![alt text](imgs/poly_result.png)
 ---
@@ -158,7 +162,7 @@ The final video can be found in the base directory: [project_video_attempt1.mp4]
 
 #### 1. Briefly discuss any problems / issues you faced in your implementation of this project.  Where will your pipeline likely fail?  What could you do to make it more robust?
 
-The key idea in the approach I've taken is to try to do an ensemble approach. Much like how the Sobel used a combination of different techniques to get a superior result, I took a combination of different approaches with the R and S channel to yield a superior result. 
+The key idea in the approach I've taken is to try to do an ensemble approach. Much like how the Sobel used a combination of different techniques to get a superior result, I took a combination of different approaches with the R and S channel to yield a superior result. An ensemble-like approach would be able to learn all possible representations which can be used for this video.
 
 When testing the pipeline on the harder examples it doesn't perform as well. This is probably due to the fact that there is no "memory" across different frames. 
 
